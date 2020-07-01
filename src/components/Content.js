@@ -5,7 +5,7 @@ class Contents extends Component {
     render() { 
         return (  
         <div className="Content">
-             <h1>this id the content</h1>
+             <h1>this id the contentt</h1>
         </div>
        
         );
