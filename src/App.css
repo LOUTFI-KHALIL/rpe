@@ -1,80 +1,67 @@
-/* .Main {
-    padding:1px 0;
-    max-width:960px;
-    margin:auto;
-    max-width:960px;
-    position:relative;
-    } */
-    /* Content {
-        
-        background-color:#e61638;
-    
-        } */
+
 
         body {
             margin:0;
             padding:0;
-            height:50%;
+           
          }
-           .Header {
-                text-align: center;
-                                 display: block;
-            font-family: Arial;
-            padding: 1px;
-            margin: 0px;
-            background: #d80606;
-            border-style: double ;
-            border: 0px;
-            border-color: black;
-               }
+           
 
                .TopMenu {
-                               background-color: rgb(41, 28, 235);
-                font-family: Arial;
-                padding: 10px;
-                box-sizing: border-box;
-                display: block;
-                border: 1px aqua solid;
-                margin: 0px;
-            }
-           
+                background-color: rgb(41, 28, 235);
+ font-family: Arial;
+ padding: 10px;
+ box-sizing: border-box;
+ display: block;
+ border: 1px aqua solid;
+ margin: 0px;
+ clear:both;
+}
+.Header {
+    text-align: center;
+                     display: block;
+font-family: Arial;
+padding: 1px;
+margin: 0px;
+background: #d80606;
+border-style: double ;
+border: 0px;
+border-color: black;
+   }  
                     
             
                 
                       
-            /* .Menu {
-                overflow: hidden;
-                background-color: #333;
-                float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-            }
-                   
+           
             .Content {
-                width: 100%;
-                padding: 0;
-                float: left;
-                width: 25%;
-                background-color: #f1f1f1;
-                padding-left: 20px;
-                box-sizing: border-box;
-                display: block;
-                font-family: Arial;
+              
                 padding: 10px;
-                background: #f1f1f1;
-            }
+                font-family: Arial;
+                    background: #dfa814;
+                    margin-top: 0px;
+                     border: 1px solid yellowgreen;
+                     height: 450px;
+                     padding-bottom:60px;   /* Height of the footer */
+                     position: relative;
+                    clear:both;
+                   
+                                }
       
-} */
-        .Footer{ padding: 20px;
-            position:absolute;
-            bottom:0;
-            width:100%;
-            height:50px;   /* Height of the footer */
-            background:#6cf}
 
+        .Footer{ clear:both;
+            
+            padding: 15px  0px;
+               bottom:0;
+   width:100%;
+   height:3%;   /* Height of the footer */
+   background:#6cf;
+   display: block;
+   position: relative;
+   
+        }
+        .Footer h5 { text-align: right;
+        padding-right: 10px;}
+     
 
 
     

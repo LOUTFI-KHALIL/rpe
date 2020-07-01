@@ -4,7 +4,7 @@ class TopMenu extends Component {
     render() { 
         return ( 
             <div className="TopMenu"> 
-            <h1>Top Menu</h1>
+            <h6>Top Menu</h6>
             </div>
          );
     }

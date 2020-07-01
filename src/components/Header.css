@@ -19,7 +19,7 @@
     display:inline-block;
     color: rgb(132, 134, 141);
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px  10px;
     text-decoration: none;
    
   }
@@ -33,9 +33,10 @@
     color: black;
   }
   ul {
-    position: fixed;
-    top: 0;
+   
     width: 100%;
   } 
    
-    
+    /* pour derniere ul : 
+    position: fixed;
+    top: 0; */

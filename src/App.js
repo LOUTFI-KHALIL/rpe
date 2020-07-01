@@ -11,10 +11,10 @@ function App() {
     <div className="App">
        <Header/>
        <TopMenu/>
-      {/*<Menu/>
-             <Contents/> */}
-      <Footer/> 
-    </div>
+     
+             <Contents/> 
+     <Footer/>
+          </div>
 
   );
 }
