@@ -11,47 +11,71 @@
     
         } */
 
-        .Footer, .Header, .Menu, .Content, .Main {
-            padding:1px 0;
-          display: flex;
-                        }
+        body {
+            margin:0;
+            padding:0;
+            height:50%;
+         }
            .Header {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width:800px;
-            height:50px;
-            background-color:hotpink;
+                text-align: center;
+                                 display: block;
+            font-family: Arial;
+            padding: 1px;
+            margin: 0px;
+            background: #d80606;
+            border-style: double ;
+            border: 0px;
+            border-color: black;
                }
+
+               .TopMenu {
+                               background-color: rgb(41, 28, 235);
+                font-family: Arial;
+                padding: 10px;
+                box-sizing: border-box;
+                display: block;
+                border: 1px aqua solid;
+                margin: 0px;
+            }
+           
+                    
             
+                
                       
-            .Menu {
-                position: absolute;
-                top: 50px;
-                left: 0px;
-                width: 200px;
-                height: 400px;
-                background-color: greenyellow;
+            /* .Menu {
+                overflow: hidden;
+                background-color: #333;
+                float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
             }
                    
-          .Content {
-            position: absolute;
-    top: 50px;
-    left: 200px;
-    width:600px;
-    height:400px;
-    background-color:aquamarine;
+            .Content {
+                width: 100%;
+                padding: 0;
+                float: left;
+                width: 25%;
+                background-color: #f1f1f1;
+                padding-left: 20px;
+                box-sizing: border-box;
+                display: block;
+                font-family: Arial;
+                padding: 10px;
+                background: #f1f1f1;
             }
-            .Footer {
-                position: absolute;
-      left: 0px;
-    width:800px;
-    height:50px;
-    background-color:rgb(132, 13, 211);
-    position: fixed;
-    ;
-             }
-   
+      
+} */
+        .Footer{ padding: 20px;
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:50px;   /* Height of the footer */
+            background:#6cf}
 
 
+
+    
 

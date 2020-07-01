@@ -5,15 +5,17 @@ import Footer from './components/Footer'
 import Contents from './components/Content'
 import Header from './components/Header';
 import Menu from './components/Menu';
+import TopMenu from './components/TopMenu';
 function App() {
   return (
     <div className="App">
-      <Header/>
-       <Menu/>
-      <Contents/>
-      <Footer/>
+       <Header/>
+       <TopMenu/>
+      {/*<Menu/>
+             <Contents/> */}
+      <Footer/> 
     </div>
-    
+
   );
 }
 

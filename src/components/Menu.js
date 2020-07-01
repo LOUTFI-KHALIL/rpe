@@ -6,6 +6,14 @@ class Menu extends Component {
         return ( 
             <div className="Menu">
                 <h1>Menu</h1>
+                <ul>
+                 <li>Menu1</li>
+                 <li>Menu2</li>
+                 <li>Menu3</li>
+                 <li>Menu4</li>
+                 <li>Menu5</li>
+                 <li>Menu6</li>
+                </ul>
             </div>
          );
     }

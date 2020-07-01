@@ -10,8 +10,8 @@ class Header extends Component {
   state = {};
   render() {
     return (
-      <div className="NavBar">
-        <ul>
+      <div className="Header">
+       <ul>
           <li>
             <a class="active" href="#home">
               Home
@@ -26,7 +26,10 @@ class Header extends Component {
           <li >
             <a href="#about">About</a>
           </li>
-        </ul>
+        </ul> 
+      
+       
+    
       </div>
     );
   }
