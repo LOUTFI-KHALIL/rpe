@@ -13,21 +13,23 @@ class Header extends Component {
       <div className="Header">
        <ul>
           <li>
-            <a class="active" href="#home">
-              Home
-            </a>
+          {/* <Link to="/">Acceuil</Link> */}
           </li>
           <li>
-            <a href="#news">News</a>
+            <a href="#news">Nouveau</a>
           </li>
           <li>
+          
             <a href="#contact">Contact</a>
           </li>
           <li >
-            <a href="#about">About</a>
+            <a href="#about">Apropos</a>
+          </li>
+          <li >
+          {/* <Link to="/Content">Content</Link> */}
           </li>
         </ul> 
-      
+        
        
     
       </div>

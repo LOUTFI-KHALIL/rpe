@@ -14,3 +14,17 @@ margin-right:245px;
 margin-left:245px;
 min-height:150px;
     } */
+
+    .Content {
+        clear:both;
+        padding: 10px;
+        font-family: Arial;
+            background:#f3f0f0;;
+            margin-top: 0px;
+             border: 0px solid yellowgreen;
+             height: 450px;
+             padding-bottom:60px;   /* Height of the footer */
+             position: relative;
+            clear:both;
+           
+                        }

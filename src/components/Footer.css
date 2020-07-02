@@ -17,6 +17,19 @@ text-align:center;
 clear:both;
     } */
   
-   
+    .Footer{ clear:left;
+        padding: 1px  0px;
+        margin: 0px;
+bottom:0;
+width:100%;
+height:3%;   /* Height of the footer */
+background:rgb(35, 32, 35);
+display: block;
+position: relative;
+background-color: rgb(255, 115, 0);
+
+}
+.Footer h5 { text-align: center;
+padding-right: 10px;}
   
   

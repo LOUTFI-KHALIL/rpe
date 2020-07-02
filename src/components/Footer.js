@@ -5,7 +5,7 @@ class Footer extends Component {
     render() { 
         return (  
         <div className="Footer">
-  <h5>Loutfi Khalil ©2020 Created by Loutfi Email Loutfi.khalilàGmail.com</h5>
+  <h5> ©2020 Created by LOUTFI -Email: Loutfi.khalil@Gmail.com   </h5>
         </div>
        
         );

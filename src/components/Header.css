@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0px;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.212);
   }
   
   li {
@@ -25,11 +25,12 @@
   }
   
   li a:hover:not(.active) {
-    background-color: #4CAF50;
+    background-color: gold;
+    color: rgba(85, 32, 8, 0.959);
   }
   
   .active {
-    background-color: #50a2f0;
+    background-color: #ffbb00;
     color: black;
   }
   ul {
@@ -40,3 +41,14 @@
     /* pour derniere ul : 
     position: fixed;
     top: 0; */
+    .Header {
+      text-align: center;
+                       display: block;
+  font-family: Arial;
+  padding: 1px;
+  margin: 0px;
+  background: #eeeeee;
+  border-style: double ;
+  border: 0px;
+  border-color: black;
+     }  

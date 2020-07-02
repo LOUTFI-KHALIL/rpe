@@ -7,60 +7,17 @@
          }
            
 
-               .TopMenu {
-                background-color: rgb(41, 28, 235);
- font-family: Arial;
- padding: 10px;
- box-sizing: border-box;
- display: block;
- border: 1px aqua solid;
- margin: 0px;
- clear:both;
-}
-.Header {
-    text-align: center;
-                     display: block;
-font-family: Arial;
-padding: 1px;
-margin: 0px;
-background: #d80606;
-border-style: double ;
-border: 0px;
-border-color: black;
-   }  
+               
+
                     
             
                 
                       
            
-            .Content {
-              
-                padding: 10px;
-                font-family: Arial;
-                    background: #dfa814;
-                    margin-top: 0px;
-                     border: 1px solid yellowgreen;
-                     height: 450px;
-                     padding-bottom:60px;   /* Height of the footer */
-                     position: relative;
-                    clear:both;
-                   
-                                }
+           
       
 
-        .Footer{ clear:both;
-            
-            padding: 15px  0px;
-               bottom:0;
-   width:100%;
-   height:3%;   /* Height of the footer */
-   background:#6cf;
-   display: block;
-   position: relative;
-   
-        }
-        .Footer h5 { text-align: right;
-        padding-right: 10px;}
+       
      
 
 

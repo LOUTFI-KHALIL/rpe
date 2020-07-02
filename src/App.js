@@ -11,9 +11,8 @@ function App() {
     <div className="App">
        <Header/>
        <TopMenu/>
-     
-             <Contents/> 
-     <Footer/>
+                  <Contents/> 
+                       <Footer/>
           </div>
 
   );
