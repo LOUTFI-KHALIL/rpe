@@ -1,4 +1,4 @@
-.Header.ul {
+.Header ul {
   list-style-type: none;
   margin: 0;
   padding: 0px;
@@ -6,7 +6,7 @@
   background-color: rgba(0, 0, 0, 0.212);
 }
 
-.Header.li {
+.Header li {
   float: left;
   border-right:1px solid #bbb;
 }
@@ -24,16 +24,16 @@
  
 }
 
-.Header.li a:hover:not(.active) {
+.Header li a:hover:not(.active) {
   background-color: gold;
   color: rgba(85, 32, 8, 0.959);
 }
 
-.Header..active {
+.Header active {
   background-color: #ffbb00;
   color: black;
 }
-.Header.ul {
+.Header ul {
  
   width: 100%;
 } 

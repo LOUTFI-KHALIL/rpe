@@ -1,4 +1,13 @@
 import React, { Component } from "react";
+import Counter from './Counter';
+import Contents from './Acceuil'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 //import 'bootstrap/dist/css/bootstrap.min.css';
 //import "antd/dist/antd.css";
 import './Header.css';
@@ -10,29 +19,15 @@ class Header extends Component {
   state = {};
   render() {
     return (
-      <div className="Header">
-       <ul>
-          <li>
-          {/* <Link to="/">Acceuil</Link> */}
-          </li>
-          <li>
-            <a href="#news">Nouveau</a>
-          </li>
-          <li>
-          
-            <a href="#contact">Contact</a>
-          </li>
-          <li >
-            <a href="#about">Apropos</a>
-          </li>
-          <li >
-          {/* <Link to="/Content">Content</Link> */}
-          </li>
-        </ul> 
-        
+     
        
-    
-      </div>
+    <div>
+      
+    </div>
+
+
+      
+     
     );
   }
 }

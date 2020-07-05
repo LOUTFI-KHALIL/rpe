@@ -23,8 +23,38 @@ class Counter extends Component {
      
     return (
       <div>
-      
-      <ul> Nom    Prenom   { this.state.Clients.map(client => <li key={client.idClient}>  {client.nom}  {client.prenom} {client.gsm} </li>)}</ul>;
+      <h1>Counter</h1>
+{/* <table>
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+  </tr>
+ 
+
+  <tr>{ this.state.Clients.map(client => 
+      <th key={client.idClient}></th>  
+      <th>{client.nom}</th>  
+      <th>{client.prenom}</th> 
+      <th>{client.gsm}</th>)}
+        </tr>
+</table> */}
+
+<table>
+<tr >
+  { this.state.Clients.map(client => 
+    <td key={client.idClient}>   {client.nom}  {client.prenom} {client.gsm}    </td>)} 
+   </tr>
+</table>
+
+
+
+
+
+      <ul> Nom    Prenom   
+        { this.state.Clients.map(client => 
+        <li key={client.idClient}> 
+         {client.nom}  {client.prenom} {client.gsm} </li>)}
+         </ul>
       <button onClick={this.handelAdd}>Add</button>
       </div>
     );
