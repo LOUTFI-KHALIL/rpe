@@ -14,6 +14,7 @@ import Acceuil from './components/Acceuil'
 //import TopMenu from './components/TopMenu';
 import Counter from './components/Counter';
 import Apropos from './components/Apropos'
+import AppTodoList from './components/AppTodoList'
 function App() {
   return (
   
@@ -21,8 +22,11 @@ function App() {
        <Router>
    
        <ul>
-          <li>
+       <li>
          <Link to="/">Acceuil</Link> 
+          </li>
+          <li>
+         <Link to="/">Todo List</Link> 
           </li>
           <li>
           <Link to="/">Nouveau</Link>
@@ -40,7 +44,10 @@ function App() {
         </ul> 
         <hr />
         <Switch>
-          <Route exact path="/">
+        <Route exact path="/">
+            <AppTodoList />
+          </Route> 
+          <Route  path="/Acceuil">
             <Acceuil />
           </Route>
           
