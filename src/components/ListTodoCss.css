@@ -1,13 +1,13 @@
 .list{
     color: #fff;
     width: 300px;
-    margin: 10px auto;
+    margin: 20px auto;
     height: 50px;
     background-color: #bf07ac;
     border-radius: 5px;
 }
 .list p{
-    padding: 15px;
+    padding: 10px;
     position: relative;
     transition: ease-in-out;
 }
