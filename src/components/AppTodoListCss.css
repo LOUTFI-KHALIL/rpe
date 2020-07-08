@@ -6,6 +6,7 @@ body {
     min-height : 500px;
     width: 400px;
     margin: 40px auto;
+    border-radius: 7px;
 }   
 
 .TodoList h1{
@@ -16,7 +17,7 @@ font-size: 20px;
 font-weight: bolder;
 ;}
     
-.TodoList input{
+#to-do-form input{
     background-color: rgb(27, 112, 127);
     border: 0;
     width: 200px;
@@ -27,13 +28,13 @@ font-weight: bolder;
     border-radius: 10px;
     color: #fff;
 }
-.TodoList input::placeholder{
+#to-do-form input::placeholder{
     color: rgba(255,255,255 ,0.5);
 }
-.TodoList input:focus ,#to-do-form button:focus {
+#to-do-form input:focus ,#to-do-form button:focus {
     outline: none;
 }
-.TodoList button{
+#to-do-form button{
     height: 50px;
     width: 80px;
     border: 0;
