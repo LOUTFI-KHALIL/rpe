@@ -23,7 +23,7 @@ function ListTodoInApp(props) {
      
     </div>})
     return <div>
-        <FlipMove duration={700} easing="ease-in-out">
+        <FlipMove duration={300} easing="ease-in-out">
         {listItems}
         </FlipMove>
     

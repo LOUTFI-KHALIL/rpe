@@ -1,6 +1,6 @@
 .list{
     color: #fff;
-    width: 300px;
+    width: 250px;
     margin: 20px auto;
     height: 50px;
     background-color: #bf07ac;
@@ -12,17 +12,22 @@
     transition: ease-in-out;
 }
 .list p input{
+    position: absolute;
     background-color: transparent;
+    padding: 0px;
     border: 0;
     color: #fff;
     font-size: 18px;
+    margin: 0px;
+   top: 0px;
+   left: 10px;
 }
 .list p input:focus{
     outline: none;
 }
 .list p span{
     position: absolute;
-    right: 10px;
+    right: 5px;
 }
 .faicons{
     margin: 0 5px;

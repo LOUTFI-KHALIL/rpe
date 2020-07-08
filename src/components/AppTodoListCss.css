@@ -1,12 +1,16 @@
-body {
+.todo {
     background-color: #9266ff;
-}
+   }
 .TodoList {
     background-color: #3f3160;
     min-height : 500px;
     width: 400px;
     margin: 40px auto;
+<<<<<<< HEAD
     border-radius: 7px;
+=======
+    border-radius: 30px;
+>>>>>>> 4c8869527aac22e6d1420d47bab7661819de5e03
 }   
 
 .TodoList h1{
@@ -34,9 +38,15 @@ font-weight: bolder;
 #to-do-form input:focus ,#to-do-form button:focus {
     outline: none;
 }
+<<<<<<< HEAD
 #to-do-form button{
     height: 50px;
     width: 80px;
+=======
+.TodoList button{
+    height: 40px;
+    width: 90px;
+>>>>>>> 4c8869527aac22e6d1420d47bab7661819de5e03
     border: 0;
     border-radius: 5px;
     background-color: rgb(202, 156,24);

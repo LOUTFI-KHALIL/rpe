@@ -1,10 +1,63 @@
 
-
         body {
             margin:0;
             padding:0;
-           
-         }
+                    }
+
+                    .App ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0px;
+                        overflow: hidden;
+                        background-color: rgba(0, 0, 0, 0.212);
+                      }
+                      
+                      .App li {
+                        float: left;
+                        border-right:1px solid #bbb;
+                      }
+                      
+                      .App.li:last-child {
+                        border-right: none;
+                      }
+                      
+                      .App li a {
+                        display:inline-block;
+                        color: rgb(75, 71, 34);
+                        text-align: center;
+                        padding: 12px  10px;
+                        text-decoration: none;
+                       
+                      }
+                      
+                      .App li a:hover:not(.active) {
+                        background-color: gold;
+                        color: rgba(85, 32, 8, 0.959);
+                      }
+                      
+                      .App active {
+                        background-color: #ffbb00;
+                        color: black;
+                      }
+                      .App ul {
+                       height: 10%;
+                        width: 100%;
+                      } 
+                       
+                        /* pour derniere ul : 
+                        position: fixed;
+                        top: 0; */
+                        .App {
+                          text-align: center;
+                                           display: block;
+                      font-family: Arial;
+                      padding: 1px;
+                      margin: 0px;
+                      background-color: #e2ca5c;
+                      border-style: double ;
+                      border: 0px;
+                      border-color: black;
+                         }  
 
         
             
