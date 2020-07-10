@@ -4,6 +4,7 @@ import "./App.css";
 //import Navbar from './components/NavbarTest'
 import Footer from "./components/Footer";
 import Acceuil from "./components/Acceuil";
+import Testing from "./components/testing";
 //import Header from './components/Header';
 //import Menu from './components/Menu';
 //import TopMenu from './components/TopMenu';
@@ -21,25 +22,32 @@ function App() {
           <li>
             <Link to="/AppTodoList">Todo List</Link>
           </li>
-                   <li>
+          <li>
             <Link to="/Counter">Tableau</Link>
+          </li>
+          <li>
+            <Link to="/Testing">test</Link>
           </li>
           <li>
             <Link to="/Apropos">Apropos</Link>
           </li>
           <li>{/* <Link to="/Content">Content</Link> */}</li>
         </ul>
-        
+
         <Switch>
           <Route exact path="/">
-          <Acceuil />
+            <Acceuil />
           </Route>
           <Route path="/Acceuil">
-          <Acceuil />
+            <Acceuil />
           </Route>
 
           <Route path="/Counter">
             <Counter />
+          </Route>
+
+          <Route path="/Testing">
+            <Testing />
           </Route>
 
           <Route path="/AppTodoList">
