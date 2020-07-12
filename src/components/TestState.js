@@ -4,38 +4,86 @@ class TestState extends Component {
     super(props);
 
     this.state = {
-      items: [],
-      currentItem: {
-        id: 1,
-        nom: "loutfi",
-        prenom: "khalil",
+      CurentItems: {
+        id: 0,
+        nom: "",
+        prenom: "",
       },
+
+      items: [
+        {
+          id: 1,
+          nom: "loutfi",
+          prenom: "khalil",
+        },
+        {
+          id: 2,
+          nom: "loutfi",
+          prenom: "Youssef",
+        },
+        {
+          id: 3,
+          nom: "loutfi",
+          prenom: "Ilyass",
+        },
+      ],
     };
   }
+  HandelAdd = (e) => {
+    alert("button ad is clicked");
 
-  handleInput(e) {
+    e.preventDefault();
+    const newItem = this.state.CurentItems;
+
+    const items = [...this.state.items, newItem];
     this.setState({
-      currentItem: {
-        nom: e.target.value,
-        Id: Date.now(),
+      items: items,
+      CurentItems: {
+        nom: "",
+        prenom: "",
       },
     });
-    console.log(this.state.nom);
-  }
+  };
+  HandelDellete = () => {
+    alert("Button delete is clicked");
+  };
+  HandeleUpdate = () => {
+    alert("Update is clicked");
+  };
+  handelEvent = (e) => {
+    this.setState({
+      CurentItems: {
+        id: 5,
+        nom: e.target.value,
+        prenom: "Meriem",
+      },
+    });
+  };
   render() {
     return (
       <div>
-        <h1>bonjourr</h1>
+        <h1>hello from TestState </h1>
         <ul>
-          <li>
-            <input value={this.state.nom}></input>
-            <button>Add</button>
-            <button>delete</button>
-            <button>update</button>
-          </li>
+          {this.state.items.map((item) => (
+            <ul key={item.id}>
+              <li>{item.id}</li>
+              <li>{item.nom}</li>
+              <li>{item.prenom}</li>
+              <input
+                placeholder="ecrire "
+                value={this.state.CurentItems.nom}
+                onChange={this.handelEvent}
+              ></input>
+              <button onClick={this.HandelAdd}>Add</button>
+              <button onClick={this.HandelDellete}>Delete</button>
+              <button onClick={this.HandeleUpdate}>Update</button>
+            </ul>
+          ))}
+          ;
         </ul>
       </div>
     );
   }
 }
+
 export default TestState;
