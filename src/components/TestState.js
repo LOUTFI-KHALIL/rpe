@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Item from "antd/lib/list/Item";
 class TestState extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +31,8 @@ class TestState extends Component {
     };
   }
   HandelAdd = (e) => {
-    alert("button ad is clicked");
+   
+ var maxId =this.state.items.length;
 
     e.preventDefault();
     const newItem = this.state.CurentItems;
@@ -39,21 +41,31 @@ class TestState extends Component {
     this.setState({
       items: items,
       CurentItems: {
+        id:3,
         nom: "",
         prenom: "",
       },
     });
   };
-  HandelDellete = () => {
-    alert("Button delete is clicked");
+  HandelDellete = (valueId) => {
+   const filtredItems= this.state.items.filter((item)=> item.id !==valueId);
+   this.setState({items:filtredItems});
   };
-  HandeleUpdate = () => {
-    alert("Update is clicked");
+  HandeleUpdate = (valueId) => {
+    const items =this.state.items;
+    
+    alert(this.state.items.length)
+    items.map((item) => {
+if (Item.id==valueId){
+  item.nom='textvalue'
+};
+this.setState({items:items});
+    });
   };
   handelEvent = (e) => {
     this.setState({
       CurentItems: {
-        id: 5,
+        id: 0,
         nom: e.target.value,
         prenom: "Meriem",
       },
@@ -65,8 +77,8 @@ class TestState extends Component {
         <h1>hello from TestState </h1>
         <ul>
           {this.state.items.map((item) => (
-            <ul key={item.id}>
-              <li>{item.id}</li>
+            <div key={item.id}>
+             <li>{item.id}</li>
               <li>{item.nom}</li>
               <li>{item.prenom}</li>
               <input
@@ -76,8 +88,9 @@ class TestState extends Component {
               ></input>
               <button onClick={this.HandelAdd}>Add</button>
               <button onClick={this.HandelDellete}>Delete</button>
-              <button onClick={this.HandeleUpdate}>Update</button>
-            </ul>
+              <button onClick={()=>this.HandelDellete(item.id)}>Delete</button>
+              <button onClick={()=>this.HandeleUpdate(item.id)} onChange={this.handelEvent} >Update</button>
+            </div>
           ))}
           ;
         </ul>
