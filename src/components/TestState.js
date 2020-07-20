@@ -31,8 +31,7 @@ class TestState extends Component {
     };
   }
   HandelAdd = (e) => {
-   
- var maxId =this.state.items.length;
+    var maxId = this.state.items.length;
 
     e.preventDefault();
     const newItem = this.state.CurentItems;
@@ -41,33 +40,40 @@ class TestState extends Component {
     this.setState({
       items: items,
       CurentItems: {
-        id:3,
+        id: maxId + 1,
         nom: "",
         prenom: "",
       },
     });
   };
   HandelDellete = (valueId) => {
-   const filtredItems= this.state.items.filter((item)=> item.id !==valueId);
-   this.setState({items:filtredItems});
+    const filtredItems = this.state.items.filter((item) => item.id !== valueId);
+    this.setState({ items: filtredItems });
   };
   HandeleUpdate = (valueId) => {
-    const items =this.state.items;
-    
-    alert(this.state.items.length)
+    const items = this.state.items;
+
     items.map((item) => {
-if (Item.id==valueId){
-  item.nom='textvalue'
-};
-this.setState({items:items});
+      if (item.id == valueId) {
+        item.nom = "e.target.value";
+      }
+      this.setState({ items: items });
     });
   };
   handelEvent = (e) => {
+    var maxId = this.state.items.length;
     this.setState({
       CurentItems: {
-        id: 0,
+        id: maxId + 1,
         nom: e.target.value,
-        prenom: "Meriem",
+        prenom: e.target.value,
+      },
+    });
+  };
+  handelChangeNom = (nom) => {
+    this.setState({
+      CurentItems: {
+        nom: nom.target.value,
       },
     });
   };
@@ -78,7 +84,7 @@ this.setState({items:items});
         <ul>
           {this.state.items.map((item) => (
             <div key={item.id}>
-             <li>{item.id}</li>
+              <li>{item.id}</li>
               <li>{item.nom}</li>
               <li>{item.prenom}</li>
               <input
@@ -88,11 +94,18 @@ this.setState({items:items});
               ></input>
               <button onClick={this.HandelAdd}>Add</button>
               <button onClick={this.HandelDellete}>Delete</button>
-              <button onClick={()=>this.HandelDellete(item.id)}>Delete</button>
-              <button onClick={()=>this.HandeleUpdate(item.id)} onChange={this.handelEvent} >Update</button>
+              <button onClick={() => this.HandelDellete(item.id)}>
+                Delete
+              </button>
+              <button
+                onClick={() => this.HandeleUpdate(item.id)}
+                onChange={this.handelEvent}
+                onChange={this.handelChangeNom}
+              >
+                Update
+              </button>
             </div>
           ))}
-          ;
         </ul>
       </div>
     );

@@ -11,6 +11,7 @@ import TestState from "./components/TestState";
 import Counter from "./components/Counter";
 import Apropos from "./components/Apropos";
 import AppTodoList from "./components/AppTodoList";
+import Essei from "./components/essey";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,9 @@ function App() {
           </li>
           <li>
             <Link to="/TestState">test</Link>
+          </li>
+          <li>
+            <Link to="/Essei">essei</Link>
           </li>
           <li>
             <Link to="/Apropos">Apropos</Link>
@@ -48,6 +52,9 @@ function App() {
 
           <Route path="/TestState">
             <TestState />
+          </Route>
+          <Route path="/essei">
+            <Essei />
           </Route>
           <Route path="/AppTodoList">
             <AppTodoList />
