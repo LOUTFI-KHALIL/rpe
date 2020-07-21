@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import Item from "antd/lib/list/Item";
+import { Input } from "antd";
+var a 
 class Essei extends Component {
   constructor(props) {
     super(props);
     this.state = {
       curentItem: {
-        id: 0,
+        id: null,
         nom: "",
         prenom: "",
       },
@@ -27,32 +30,18 @@ class Essei extends Component {
       ],
     };
   }
-  handeleChangeid = (t) => {
+  handeleChange = (e) => {
+  
+    const valeur = e.target.value
     this.setState({
-      curentItem: {
-        id: t.target.value,
+      curentItem: {... this.state.curentItem,
+        [e.target.name]: valeur,
       },
     });
     console.log(this.state.curentItem);
   };
 
-  handeleChangenom = (e, text) => {
-    this.setState({
-      curentItem: {
-        nom: e.target.value,
-      },
-    });
-    console.log(this.state.curentItem);
-  };
-
-  handeleChangeprenom = (e) => {
-    this.setState({
-      curentItem: {
-        prenom: e.target.value,
-      },
-    });
-    console.log(this.state.curentItem);
-  };
+    
   addClient = (e) => {
     e.preventDefault();
     const newLine = this.state.curentItem;
@@ -67,55 +56,79 @@ class Essei extends Component {
       },
     });
   };
+ 
+
+ valueId =( valeurId)=>{
+  a= valeurId
+ }
+
+  handleDelete =(ids)=>{
+  
+   const filtredItems=this.state.items.filter((item)=> item.id !== ids);
+   this.setState({items:filtredItems});
+  };
+
+  handelDubleClick =()=>{ 
+    const selectedline= this.state.items.filter((item)=> item.id===a)
+   
+     this.setState({curentItem: selectedline });
+    
+   console.log(selectedline);
+
+  };
   render() {
     return (
       <div>
         <form>
           {this.state.items.map((item) => (
-            <tr key={item.id}>
+            <tr key={item.id}  onClick={()=>this.valueId(item.id)} onDoubleClick={()=>this.handelDubleClick(a)}>
               <td>
                 <input
                   placeholder="Id"
                   value={item.id}
-                  onChange={this.handeleChangeid}
-                />
+                  onChange={this.handeleChange}
+                          />
               </td>
               <td>
                 <input
                   placeholder="enter le nom"
                   value={item.nom}
-                  onChange={(e, text) => this.handeleChangenom}
+                  onChange={this.handeleChange}
                 />
               </td>
               <td>
                 <input
                   placeholder="enter le prenom"
                   value={item.prenom}
-                  onChange={this.handeleChangeprenom}
+                  onChange={this.handeleChange}
+                 
                 />
               </td>
               <td></td>
             </tr>
           ))}
-          <input
+          <input type="text"
+          name="id"
             placeholder="Id"
-            value={this.state.curentItem.value}
-            onChange={this.handeleChangeid}
+            value={this.state.curentItem.id}
+            onChange={this.handeleChange}
           />
-          <input
+          <input type="text"
+          name="nom"
             placeholder="enter le nom"
-            value={this.state.curentItem.value}
-            onChange={(e, text) => this.handeleChangenom}
+            value={this.state.curentItem.nom}
+            onChange={this.handeleChange}
           />
-          <input
+          <input type="text"
+          name="prenom"
             placeholder="enter le prenom"
-            value={this.state.curentItem.value}
-            onChange={this.handeleChangeprenom}
+            value={this.state.curentItem.prenom}
+            onChange={this.handeleChange}
           />
           <button on onClick={this.addClient}>
             Add
           </button>
-          <button>delete</button>
+          <button onClick= {()=>this.handleDelete(a)}>delete</button>
           <button>update</button>
         </form>
       </div>
