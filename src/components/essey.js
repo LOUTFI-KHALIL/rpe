@@ -44,7 +44,7 @@ class Essei extends Component {
     this.setState({
       items: Items,
       curentItem: {
-        id: "",
+        id: 0,
         nom: "",
         prenom: "",
       },
@@ -80,18 +80,23 @@ class Essei extends Component {
   //   console.log(selectedline);
   // };
 
-  handelUpdate = (e) => {
-    const valeur = e.target.value;
+  handelUpdate = () => {
+    const filtredItems = this.state.items.filter((item) => item.id !== a);
+    this.setState({ items: filtredItems });
+    console.log(filtredItems, "filtredItems");
+    console.log(this.state.items, "items");
+    const newLine = this.state.curentItem;
+    console.log(newLine, "newLine");
+    const Items = [...filtredItems, newLine];
+    console.log(Items, "Items+newLine");
 
-    const items = this.state.items;
-    items.map((item) => {
-      if (item.id === a) {
-        // console.log(item.key + "    " + key);
-        this.setState({
-          ...item,
-        });
-        console.log(item);
-      }
+    this.setState({
+      items: Items,
+      curentItem: {
+        id: 0,
+        nom: "",
+        prenom: "",
+      },
     });
   };
 
@@ -104,19 +109,13 @@ class Essei extends Component {
             onClick={() => this.valueId(item.id, item.nom, item.prenom)}
           >
             <li>
-              <input
-                disabled="disabled"
-                placeholder="Id"
-                value={item.id}
-                onChange={this.handeleChange}
-              />
+              <input disabled="disabled" placeholder="Id" value={item.id} />
             </li>
             <li>
               <input
                 disabled="disabled"
                 placeholder="enter le nom"
                 value={item.nom}
-                onChange={this.handeleChange}
               />
             </li>
             <li>
@@ -124,7 +123,6 @@ class Essei extends Component {
                 disabled="disabled"
                 placeholder="enter le prenom"
                 value={item.prenom}
-                onChange={this.handeleChange}
               />
             </li>
           </ul>
