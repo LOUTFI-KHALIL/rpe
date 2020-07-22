@@ -20,20 +20,7 @@ class AppTodoList extends Component {
     this.deleteItem = this.deleteItem.bind(this);
     this.setUpdate = this.setUpdate.bind(this);
   }
-  addItem(e) {
-    e.preventDefault();
-    const newItem = this.state.currentItem;
-    if (newItem.text !== "") {
-      const items = [...this.state.items, newItem];
-      this.setState({
-        items: items,
-        currentItem: {
-          text: "",
-          key: "",
-        },
-      });
-    }
-  }
+
   handleInput(e) {
     this.setState({
       curentItem: {
@@ -42,10 +29,11 @@ class AppTodoList extends Component {
       },
     });
   }
+
   addItem(e) {
     e.preventDefault();
     const newItem = this.state.curentItem;
-    console.log('plein',newItem);
+    console.log("plein", newItem);
     if (newItem !== "") {
       const newItems = [...this.state.items, newItem];
       this.setState({
@@ -55,10 +43,26 @@ class AppTodoList extends Component {
           key: "",
         },
       });
-    } else{
-      console.log('vide',newItem);
+    } else {
+      console.log("vide", newItem);
     }
   }
+
+  // addItem(e) {
+  //   e.preventDefault();
+  //   const newItem = this.state.currentItem;
+  //   if (newItem.text !== "") {
+  //     const items = [...this.state.items, newItem];
+  //     this.setState({
+  //       items: items,
+  //       currentItem: {
+  //         text: "",
+  //         key: "",
+  //       },
+  //     });
+  //   }
+  // }
+
   deleteItem(key) {
     const filteredItems = this.state.items.filter((item) => item.key !== key);
     this.setState({

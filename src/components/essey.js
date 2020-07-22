@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Item from "antd/lib/list/Item";
-import { Input } from "antd";
-var a 
+var a, b, c;
 class Essei extends Component {
   constructor(props) {
     super(props);
@@ -31,17 +29,13 @@ class Essei extends Component {
     };
   }
   handeleChange = (e) => {
-  
-    const valeur = e.target.value
+    const valeur = e.target.value;
     this.setState({
-      curentItem: {... this.state.curentItem,
-        [e.target.name]: valeur,
-      },
+      curentItem: { ...this.state.curentItem, [e.target.name]: valeur },
     });
-    console.log(this.state.curentItem);
   };
 
-    
+  // add neu client
   addClient = (e) => {
     e.preventDefault();
     const newLine = this.state.curentItem;
@@ -50,86 +44,116 @@ class Essei extends Component {
     this.setState({
       items: Items,
       curentItem: {
-        id: 0,
+        id: "",
         nom: "",
         prenom: "",
       },
     });
   };
- 
+  // end arrow function add client
 
- valueId =( valeurId)=>{
-  a= valeurId
- }
-
-  handleDelete =(ids)=>{
-  
-   const filtredItems=this.state.items.filter((item)=> item.id !== ids);
-   this.setState({items:filtredItems});
+  valueId = (valeurId, valeurnom, valeuprenom) => {
+    a = valeurId;
+    b = valeurnom;
+    c = valeuprenom;
+    this.setState({
+      curentItem: {
+        id: a,
+        nom: b,
+        prenom: c,
+      },
+    });
+  };
+  handelSubmit = (e) => {
+    e.preventDefault();
+  };
+  handleDelete = (ids) => {
+    const filtredItems = this.state.items.filter((item) => item.id !== ids);
+    this.setState({ items: filtredItems });
   };
 
-  handelDubleClick =()=>{ 
-    const selectedline= this.state.items.filter((item)=> item.id===a)
-   
-     this.setState({curentItem: selectedline });
-    
-   console.log(selectedline);
+  // handelDubleClick = () => {
+  //   const selectedline = this.state.items.filter((item) => item.id === a);
 
+  //   this.setState({ curentItem: selectedline });
+
+  //   console.log(selectedline);
+  // };
+
+  handelUpdate = (e) => {
+    const valeur = e.target.value;
+
+    const items = this.state.items;
+    items.map((item) => {
+      if (item.id === a) {
+        // console.log(item.key + "    " + key);
+        this.setState({
+          ...item,
+        });
+        console.log(item);
+      }
+    });
   };
+
   render() {
     return (
       <div>
-        <form>
-          {this.state.items.map((item) => (
-            <tr key={item.id}  onClick={()=>this.valueId(item.id)} onDoubleClick={()=>this.handelDubleClick(a)}>
-              <td>
-                <input
-                  placeholder="Id"
-                  value={item.id}
-                  onChange={this.handeleChange}
-                          />
-              </td>
-              <td>
-                <input
-                  placeholder="enter le nom"
-                  value={item.nom}
-                  onChange={this.handeleChange}
-                />
-              </td>
-              <td>
-                <input
-                  placeholder="enter le prenom"
-                  value={item.prenom}
-                  onChange={this.handeleChange}
-                 
-                />
-              </td>
-              <td></td>
-            </tr>
-          ))}
-          <input type="text"
+        {this.state.items.map((item) => (
+          <ul
+            key={item.id}
+            onClick={() => this.valueId(item.id, item.nom, item.prenom)}
+          >
+            <li>
+              <input
+                disabled="disabled"
+                placeholder="Id"
+                value={item.id}
+                onChange={this.handeleChange}
+              />
+            </li>
+            <li>
+              <input
+                disabled="disabled"
+                placeholder="enter le nom"
+                value={item.nom}
+                onChange={this.handeleChange}
+              />
+            </li>
+            <li>
+              <input
+                disabled="disabled"
+                placeholder="enter le prenom"
+                value={item.prenom}
+                onChange={this.handeleChange}
+              />
+            </li>
+          </ul>
+        ))}
+        <input
+          type="text"
           name="id"
-            placeholder="Id"
-            value={this.state.curentItem.id}
-            onChange={this.handeleChange}
-          />
-          <input type="text"
+          placeholder="Entrer id"
+          value={this.state.curentItem.id}
+          onChange={this.handeleChange}
+        />
+        <input
+          type="text"
           name="nom"
-            placeholder="enter le nom"
-            value={this.state.curentItem.nom}
-            onChange={this.handeleChange}
-          />
-          <input type="text"
+          placeholder="enter le nom"
+          value={this.state.curentItem.nom}
+          onChange={this.handeleChange}
+        />
+        <input
+          type="text"
           name="prenom"
-            placeholder="enter le prenom"
-            value={this.state.curentItem.prenom}
-            onChange={this.handeleChange}
-          />
-          <button on onClick={this.addClient}>
-            Add
-          </button>
-          <button onClick= {()=>this.handleDelete(a)}>delete</button>
-          <button>update</button>
+          placeholder="enter le prenom"
+          value={this.state.curentItem.prenom}
+          onChange={this.handeleChange}
+        />
+        <form onSubmit={this.handelSubmit}>
+          <button onClick={this.addClient}>Add</button>
+          <button onClick={() => this.handleDelete(a)}>delete</button>
+          <button onClick={this.handelUpdate}>update</button>
         </form>
       </div>
     );

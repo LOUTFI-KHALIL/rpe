@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Item from "antd/lib/list/Item";
 class TestState extends Component {
   constructor(props) {
     super(props);
@@ -52,9 +51,8 @@ class TestState extends Component {
   };
   HandeleUpdate = (valueId) => {
     const items = this.state.items;
-
     items.map((item) => {
-      if (item.id == valueId) {
+      if (item.id === valueId) {
         item.nom = "e.target.value";
       }
       this.setState({ items: items });
@@ -99,8 +97,7 @@ class TestState extends Component {
               </button>
               <button
                 onClick={() => this.HandeleUpdate(item.id)}
-                onChange={this.handelEvent}
-                onChange={this.handelChangeNom}
+                onChange={(this.handelEvent, this.handelChangeNom)}
               >
                 Update
               </button>
