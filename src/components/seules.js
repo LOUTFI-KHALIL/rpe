@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-class seule extends Component {
-  state = {};
+class seules extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
-      <div className="seule">
-        <h1>this is essey tout seule</h1>
+      <div>
+        <h1>bonjour</h1>
       </div>
     );
   }
 }
 
-export default seule;
+export default seules;
