@@ -28,6 +28,11 @@ class Essei extends Component {
       ],
     };
   }
+
+  handelSubmit = (e) => {
+    e.preventDefault();
+  };
+
   handeleChange = (e) => {
     const valeur = e.target.value;
     this.setState({
@@ -37,7 +42,6 @@ class Essei extends Component {
 
   // add neu client
   addClient = (e) => {
-    e.preventDefault();
     const newLine = this.state.curentItem;
     const Items = [...this.state.items, newLine];
     console.log(Items);
@@ -64,32 +68,18 @@ class Essei extends Component {
       },
     });
   };
-  handelSubmit = (e) => {
-    e.preventDefault();
-  };
+  // arrow function delete
   handleDelete = (ids) => {
     const filtredItems = this.state.items.filter((item) => item.id !== ids);
     this.setState({ items: filtredItems });
   };
+  // end function delete
 
-  // handelDubleClick = () => {
-  //   const selectedline = this.state.items.filter((item) => item.id === a);
-
-  //   this.setState({ curentItem: selectedline });
-
-  //   console.log(selectedline);
-  // };
-
+  // this code can update a list
   handelUpdate = () => {
     const filtredItems = this.state.items.filter((item) => item.id !== a);
-    this.setState({ items: filtredItems });
-    console.log(filtredItems, "filtredItems");
-    console.log(this.state.items, "items");
     const newLine = this.state.curentItem;
-    console.log(newLine, "newLine");
     const Items = [...filtredItems, newLine];
-    console.log(Items, "Items+newLine");
-
     this.setState({
       items: Items,
       curentItem: {
@@ -99,7 +89,7 @@ class Essei extends Component {
       },
     });
   };
-
+  // end code arrow function delete
   render() {
     return (
       <div>
