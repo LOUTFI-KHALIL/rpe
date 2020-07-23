@@ -6,6 +6,7 @@ import Acceuil from "./components/Acceuil";
 import TestState from "./components/TestState";
 import Counter from "./components/Counter";
 import Apropos from "./components/Apropos";
+import FetchJson from "./components/FetchJson"
 import AppTodoList from "./components/AppTodoList";
 import Essei from "./components/essey";
 import Timing from "./components/Timing";
@@ -30,6 +31,9 @@ function App() {
           </li>
           <li>
             <Link to="/Essei">essei</Link>
+          </li>
+          <li>
+            <Link to="/FetchJson">fj</Link>
           </li>
           <li>
             <Link to="/Apropos">Apropos</Link>
@@ -77,16 +81,20 @@ function App() {
             <Apropos />
           </Route>
 
+          <Route path="/Apropos">
+           <FetchJson/>
+          </Route>
+
           <Route path="/Timing">
             <Timing />
           </Route>
 
           <Route path="/importJsonAxios">
-            <importJsonAxios />
+            <importJsonAxios/>
           </Route>
 
           <Route path="/importJsonfetch">
-            <importJsonfetch />
+            <importJsonfetch/>
           </Route>
           
         </Switch>
