@@ -1,13 +1,13 @@
 {
-  "firstName": "Rajesh",
-  "lastName": "Kumar",
+  "firstName": "loutfi",
+  "lastName": "khalil",
   "gender": "man",
-  "age": 24,
+  "age": 35,
   "address": {
-    "streetAddress": "126 Udhna",
-    "city": "Surat",
-    "state": "GJ",
-    "postalCode": "394221"
+    "streetAddress": "205 bir rami est",
+    "city": "kenitra",
+    "state": "morocco",
+    "postalCode": "14000"
   },
-  "phoneNumbers": [{ "type": "home", "number": "7383627627" }]
+  "phoneNumbers": [{ "type": "home", "number": "0530225226" }]
 }

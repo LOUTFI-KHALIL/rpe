@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 var a, b, c;
 class Essei extends Component {
   constructor(props) {
@@ -92,8 +92,9 @@ class Essei extends Component {
   // end code arrow function delete
   render() {
     return (
-      <div>
-        {this.state.items.map((item) => (
+      <Fragment>
+      <div className="essey">
+                {this.state.items.map((item) => (
           <ul
             key={item.id}
             onClick={() => this.valueId(item.id, item.nom, item.prenom)}
@@ -121,9 +122,11 @@ class Essei extends Component {
           type="text"
           name="id"
           placeholder="Entrer id"
-          value={this.state.curentItem.id}
+          value={this.state.curentItem.id || ''}
           onChange={this.handeleChange}
-        />
+          required="required"
+          autoFocus
+        /> 
         <input
           type="text"
           name="nom"
@@ -131,6 +134,7 @@ class Essei extends Component {
           value={this.state.curentItem.nom}
           onChange={this.handeleChange}
         />
+        
         <input
           type="text"
           name="prenom"
@@ -144,6 +148,7 @@ class Essei extends Component {
           <button onClick={this.handelUpdate}>update</button>
         </form>
       </div>
+      </Fragment>
     );
   }
 }

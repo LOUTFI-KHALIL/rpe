@@ -1,19 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-//import Navbar from './components/NavbarTest'
 import Footer from "./components/Footer";
 import Acceuil from "./components/Acceuil";
 import TestState from "./components/TestState";
-//import Header from './components/Header';
-//import Menu from './components/Menu';
-//import TopMenu from './components/TopMenu';
 import Counter from "./components/Counter";
 import Apropos from "./components/Apropos";
 import AppTodoList from "./components/AppTodoList";
 import Essei from "./components/essey";
-import seules from "./components/seules";
-import testo from "./components/testo";
+import Timing from "./components/Timing";
+import importJsonAxios from "./components/importJsonAxios";
+import importJsonfetch from "./components/importJsonfetch";
 function App() {
   return (
     <div className="App">
@@ -32,16 +29,22 @@ function App() {
             <Link to="/TestState">test</Link>
           </li>
           <li>
-            <Link to="/testo">testo</Link>
-          </li>
-          <li>
             <Link to="/Essei">essei</Link>
           </li>
           <li>
-            <Link to="/seules">essei Seule</Link>
-          </li>
-          <li>
             <Link to="/Apropos">Apropos</Link>
+          </li>
+
+          <li>
+            <Link to="/Timing">timing</Link>
+          </li>
+
+          <li>
+            <Link to="/importJsonAxios">importJsonAxios</Link>
+          </li>
+
+          <li>
+            <Link to="/importJsonfetch">importJsonfetch</Link>
           </li>
         </ul>
 
@@ -62,14 +65,6 @@ function App() {
             <TestState />
           </Route>
 
-          <Route path="/testo">
-            <testo />
-          </Route>
-
-          <Route path="/seules">
-            <seules />
-          </Route>
-
           <Route path="/essei">
             <Essei />
           </Route>
@@ -81,6 +76,19 @@ function App() {
           <Route path="/Apropos">
             <Apropos />
           </Route>
+
+          <Route path="/Timing">
+            <Timing />
+          </Route>
+
+          <Route path="/importJsonAxios">
+            <importJsonAxios />
+          </Route>
+
+          <Route path="/importJsonfetch">
+            <importJsonfetch />
+          </Route>
+          
         </Switch>
       </Router>
 

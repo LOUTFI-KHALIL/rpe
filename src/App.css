@@ -42,9 +42,7 @@ body {
   width: 100%;
 }
 
-/* pour derniere ul : 
-                        position: fixed;
-                        top: 0; */
+
 .App {
   text-align: center;
   display: block;
