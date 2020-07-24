@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "antd/dist/antd.css";
 import { Table } from "antd";
 class testo extends Component {
