@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class seules extends Component {
+class seule extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -13,4 +13,4 @@ class seules extends Component {
   }
 }
 
-export default seules;
+export default seule;

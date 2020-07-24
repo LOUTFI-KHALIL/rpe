@@ -12,8 +12,6 @@ import Counter from "./components/Counter";
 import Apropos from "./components/Apropos";
 import AppTodoList from "./components/AppTodoList";
 import Essei from "./components/essey";
-import seules from "./components/seules";
-import testo from "./components/testo";
 function App() {
   return (
     <div className="App">
@@ -30,6 +28,7 @@ function App() {
           </li>
           <li>
             <Link to="/TestState">test</Link>
+            <Link to="/testo">testo</Link>
           </li>
           <li>
             <Link to="/testo">testo</Link>
@@ -62,8 +61,8 @@ function App() {
             <TestState />
           </Route>
 
-          <Route path="/testo">
-            <testo />
+          <Route path="/Testo">
+            <testo></testo>
           </Route>
 
           <Route path="/seules">
