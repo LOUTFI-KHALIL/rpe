@@ -1,13 +1,44 @@
-{
-  "firstName": "loutfi",
-  "lastName": "khalil",
-  "gender": "man",
-  "age": 35,
-  "address": {
-    "streetAddress": "205 bir rami est",
-    "city": "kenitra",
-    "state": "morocco",
-    "postalCode": "14000"
+[
+  {
+    "id": 1,
+    "nom": "loutfi",
+    "prenom": "khalil",
+    "gender": "man",
+    "age": 35,
+    "address": {
+      "streetAddress": "205 bir rami est",
+      "city": "kenitra",
+      "state": "morocco",
+      "postalCode": "14000"
+    },
+    "phoneNumbers": { "type": "home", "number": "0530225226" }
   },
-  "phoneNumbers": [{ "type": "home", "number": "0530225226" }]
-}
+  {
+    "id": 2,
+    "nom": "loutfi",
+    "prenom": "youssef",
+    "gender": "man",
+    "age": 8,
+    "address": {
+      "streetAddress": "205 bir rami est",
+      "city": "kenitra",
+      "state": "usa",
+      "postalCode": "14000"
+    },
+    "phoneNumbers": { "type": "gsm", "number": "0530225226" }
+  },
+  {
+    "id": 3,
+    "nom": "loutfi",
+    "prenom": "ilyass",
+    "gender": "man",
+    "age": 1,
+    "address": {
+      "streetAddress": "205 bir rami est",
+      "city": "suisse",
+      "state": "suisse",
+      "postalCode": "14000"
+    },
+    "phoneNumbers": { "type": "home", "number": "0530225226" }
+  }
+]

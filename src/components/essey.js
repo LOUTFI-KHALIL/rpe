@@ -89,65 +89,72 @@ class Essei extends Component {
       },
     });
   };
-  // end code arrow function delete
+  // end code arrow function update
+
+  // handelUpdate = (id, text) => {
+  //   this.setState({
+  //     data: this.state.data.map((el) => (el.id === id ? { ...el, text } : el)),
+  //   });
+  // };
+
   render() {
     return (
       <Fragment>
-      <div className="essey">
-                {this.state.items.map((item) => (
-          <ul
-            key={item.id}
-            onClick={() => this.valueId(item.id, item.nom, item.prenom)}
-          >
-            <li>
-              <input disabled="disabled" placeholder="Id" value={item.id} />
-            </li>
-            <li>
-              <input
-                disabled="disabled"
-                placeholder="enter le nom"
-                value={item.nom}
-              />
-            </li>
-            <li>
-              <input
-                disabled="disabled"
-                placeholder="enter le prenom"
-                value={item.prenom}
-              />
-            </li>
-          </ul>
-        ))}
-        <input
-          type="text"
-          name="id"
-          placeholder="Entrer id"
-          value={this.state.curentItem.id || ''}
-          onChange={this.handeleChange}
-          required="required"
-          autoFocus
-        /> 
-        <input
-          type="text"
-          name="nom"
-          placeholder="enter le nom"
-          value={this.state.curentItem.nom}
-          onChange={this.handeleChange}
-        />
-        
-        <input
-          type="text"
-          name="prenom"
-          placeholder="enter le prenom"
-          value={this.state.curentItem.prenom}
-          onChange={this.handeleChange}
-        />
-        <form onSubmit={this.handelSubmit}>
-          <button onClick={this.addClient}>Add</button>
-          <button onClick={() => this.handleDelete(a)}>delete</button>
-          <button onClick={this.handelUpdate}>update</button>
-        </form>
-      </div>
+        <div className="essey">
+          {this.state.items.map((item) => (
+            <ul
+              key={item.id}
+              onClick={() => this.valueId(item.id, item.nom, item.prenom)}
+            >
+              <li>
+                <input disabled="disabled" placeholder="Id" value={item.id} />
+              </li>
+              <li>
+                <input
+                  disabled="disabled"
+                  placeholder="enter le nom"
+                  value={item.nom}
+                />
+              </li>
+              <li>
+                <input
+                  disabled="disabled"
+                  placeholder="enter le prenom"
+                  value={item.prenom}
+                />
+              </li>
+            </ul>
+          ))}
+          <input
+            type="text"
+            name="id"
+            placeholder="Entrer id"
+            value={this.state.curentItem.id || ""}
+            onChange={this.handeleChange}
+            required="required"
+            autoFocus
+          />
+          <input
+            type="text"
+            name="nom"
+            placeholder="enter le nom"
+            value={this.state.curentItem.nom}
+            onChange={this.handeleChange}
+          />
+
+          <input
+            type="text"
+            name="prenom"
+            placeholder="enter le prenom"
+            value={this.state.curentItem.prenom}
+            onChange={this.handeleChange}
+          />
+          <form onSubmit={this.handelSubmit}>
+            <button onClick={this.addClient}>Add</button>
+            <button onClick={() => this.handleDelete(a)}>delete</button>
+            <button onClick={this.handelUpdate}>update</button>
+          </form>
+        </div>
       </Fragment>
     );
   }

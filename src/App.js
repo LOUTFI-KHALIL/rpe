@@ -30,16 +30,9 @@ function App() {
           </li>
           <li>
             <Link to="/TestState">test</Link>
-            <Link to="/testo">testo</Link>
           </li>
           <li>
             <Link to="/Essei">essei</Link>
-          </li>
-          <li>
-            <Link to="/FetchJson">fj</Link>
-          </li>
-          <li>
-            <Link to="/Apropos">Apropos</Link>
           </li>
 
           <li>
@@ -52,6 +45,9 @@ function App() {
 
           <li>
             <Link to="/importJsonfetch">importJsonfetch</Link>
+          </li>
+          <li>
+            <Link to="/Apropos">Apropos</Link>
           </li>
         </ul>
 
@@ -70,14 +66,6 @@ function App() {
 
           <Route path="/TestState">
             <TestState />
-          </Route>
-
-          <Route path="/Testo">
-            <testo></testo>
-          </Route>
-
-          <Route path="/seules">
-            <seules />
           </Route>
 
           <Route path="/essei">
@@ -100,13 +88,9 @@ function App() {
             <Timing />
           </Route>
 
-          <Route path="/importJsonAxios">
-            <importJsonAxios />
-          </Route>
+          <Route path="/importJsonAxios" component={importJsonAxios}></Route>
 
-          <Route path="/importJsonfetch">
-            <importJsonfetch />
-          </Route>
+          <Route path="/importJsonfetch" component={importJsonfetch}></Route>
         </Switch>
       </Router>
 
