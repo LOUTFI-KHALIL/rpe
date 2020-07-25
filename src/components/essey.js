@@ -76,24 +76,36 @@ class Essei extends Component {
   // end function delete
 
   // this code can update a list
-  handelUpdate = () => {
-    const filtredItems = this.state.items.filter((item) => item.id !== a);
-    const newLine = this.state.curentItem;
-    const Items = [...filtredItems, newLine];
-    this.setState({
-      items: Items,
-      curentItem: {
-        id: 0,
-        nom: "",
-        prenom: "",
-      },
-    });
-  };
+  // handelUpdate = () => {
+  //   const filtredItems = this.state.items.filter((item) => item.id !== a);
+  //   const newLine = this.state.curentItem;
+  //   const Items = [...filtredItems, newLine];
+  //   this.setState({
+  //     items: Items,
+  //     curentItem: {
+  //       id: 0,
+  //       nom: "",
+  //       prenom: "",
+  //     },
+  //   });
+  // };
   // end code arrow function update
 
-  // handelUpdate = (id, text) => {
+  handelUpdate = () => {
+    const cur = this.state.curentItem;
+    var data = this.state.items;
+    this.setState({
+      data: this.state.items.map((el) => (el.id === a ? { ...el, cur } : el)),
+    });
+
+    console.log(a, "a");
+    console.log(cur, "curent item");
+    console.log(data, "data");
+  };
+
+  // handelUpdate = () => {
   //   this.setState({
-  //     data: this.state.data.map((el) => (el.id === id ? { ...el, text } : el)),
+  //     users: this.state.data.map((el) => (el.id === id ? { ...el, text } : el)),
   //   });
   // };
 
