@@ -1,21 +1,11 @@
 import React, { Component } from "react";
 import data from "../data/data.json";
-import axios from "axios";
 class importJsonfetch extends Component {
   constructor(props) {
     super(props);
-    this.state = { users: [] };
+    this.state = {};
   }
-  getUsers = () => {
-    axios.get("https://api.github.com/users").then((response) => {
-      this.setState({
-        users: response.data,
-      });
-    });
-  };
-  componentDidMount() {
-    this.getUsers();
-  }
+
   render() {
     console.log(data);
     return (
