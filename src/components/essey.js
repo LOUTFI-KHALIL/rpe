@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Table } from "react-bootstrap";
 var a, b, c;
 class Essei extends Component {
   constructor(props) {
